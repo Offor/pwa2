@@ -19,7 +19,7 @@ self.addEventListener('install', (e) => {
 });
 
 self.addEventListener('fetch',function (e) {
-    //e.response checks if the cache has the file (it it's existing)
+    //e.response checks if the cache has the file (it it's existing) add
     e.respondWith(
         caches.match(e.request).then(function (r) {
             console.log('[Service Worker] Fetching resource: ' + e.request.url);
